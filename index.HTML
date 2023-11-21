@@ -1,0 +1,112 @@
+<html lang="es">
+    <head>
+        <title>Página de inicio de sesión y registro</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            .container {
+                width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #4d0707;
+                background-color: #fff;
+            }
+            h1 {
+                text-align: center;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #5c1414;
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                background-color: #00a0d2;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #008cb8;
+            }
+            .toggle {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .toggle a {
+                color: #00a0d2;
+                text-decoration: none;
+            }
+            .toggle a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Página de inicio de sesión y registro</h1>
+            <div id="login-form">
+                <form action="#" method="post">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <form action="ropa.HTML"></form>
+                <div class="toggle">
+                    <p>¿No tienes una cuenta? <a href="#" id="show-register">Regístrate aquí</a></p>
+                </div>
+            </div>
+            <div id="register-form" style="display: none;">
+                <form action="#" method="post">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="confirm">Confirmar contraseña:</label>
+                    <input type="password" id="confirm" name="confirm" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <div class="toggle">
+                    <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Get the elements
+            var loginForm = document.getElementById("login-form");
+            var registerForm = document.getElementById("register-form");
+            var showRegister = document.getElementById("show-register");
+            var showLogin = document.getElementById("show-login");
+    
+            // Add event listeners
+            showRegister.addEventListener("click", function() {
+                // Hide the login form and show the register form
+                loginForm.style.display = "none";
+                registerForm.style.display = "block";
+            });
+    
+            showLogin.addEventListener("click", function() {
+                // Hide the register form and show the login form
+                registerForm.style.display = "none";
+                loginForm.style.display = "block";
+            });
+        </script>
+        <form action="ropa.html" method="post">
+            <!-- El resto del código del formulario -->
+        </form>
+    </body>
+</html>
